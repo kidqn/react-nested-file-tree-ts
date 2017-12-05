@@ -51,6 +51,9 @@ class FolderView extends Component {
 
     return (
       <li key={`folder-${name}`} className={open ? `open ${cns}` : cns}>
+        {open ? <i className="fa fa-folder-open" aria-hidden="true"></i>:
+         <i className="fa fa-folder" aria-hidden="true"></i>}
+
         {
           folderTemplate &&
           folderTemplate({
@@ -59,7 +62,7 @@ class FolderView extends Component {
             currentPath: parentPath + '/' + name,
             onclick: this.toggleFolder.bind(this)
           }) ||
-          <a onClick={::this.toggleFolder}>/{name}</a>
+          <a onClick={::this.toggleFolder}>{name}</a>
         }
 
         <ul style={styl} data-level={level}>

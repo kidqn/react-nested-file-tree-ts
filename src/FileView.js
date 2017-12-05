@@ -20,9 +20,10 @@ const FileView = (props) => {
       key={`file-${file.path}`}
       className={cns}
       onClick={onclickFn}>
+      <i className="fa fa-file" aria-hidden="true"></i>
       {
         fileTemplate && fileTemplate({ name: file.name }) ||
-        <a>|__{file.name}</a>
+        <a>{file.name}</a>
       }
     </li>
   )

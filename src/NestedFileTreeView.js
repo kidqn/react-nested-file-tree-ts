@@ -60,19 +60,4 @@ function NestedFileTreeView (props) {
   )
 }
 
-NestedFileTreeView.propTypes = {
-  directory: PropTypes.object.isRequired,
-  maxFolderLevel: PropTypes.number,
-  expended: PropTypes.bool,
-  className: PropTypes.string,
-  fileClickHandler: PropTypes.func,
-  folderClickHandler: PropTypes.func,
-  fileClassName: PropTypes.string,
-  folderClassName: PropTypes.string,
-  selectedFilePath: PropTypes.string,
-  selectedClassName: PropTypes.string,
-  folderTemplate: PropTypes.func,
-  fileTemplate: PropTypes.func
-}
-
 export default NestedFileTreeView
